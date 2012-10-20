@@ -1,0 +1,47 @@
+<idea-plugin version="2">
+    <name>Create Jira Ticket</name>
+    <description>Creates Atlassian Jira-Tickets directly from Comments in Sourcecode based on configurable rules.
+    </description>
+    <version>1.2.1</version>
+    <vendor>Carsten Thiele</vendor>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="99.18"/>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+        <component>
+            <implementation-class>
+                de.chamacos.plugins.intellijidea.createjiraticket.configuration.CreateJiraTicketPluginConfiguration
+            </implementation-class>
+            <loadForDefaultProject/>
+        </component>
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="CreateJiraTicket.CreateTicket"
+                class="de.chamacos.plugins.intellijidea.createjiraticket.CreateJiraTicket" text="Create Jira Ticket"
+                description="Creates a Ticket in Atlassian Jira">
+            <keyboard-shortcut keymap="$default" first-keystroke="meta shift T"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <projectConfigurable
+                instance="de.chamacos.plugins.intellijidea.createjiraticket.configuration.CreateJiraTicketSettings">
+        </projectConfigurable>
+        <intentionAction>
+            <className>de.chamacos.plugins.intellijidea.createjiraticket.CreateJiraTicket</className>
+        </intentionAction>
+
+    </extensions>
+</idea-plugin>
