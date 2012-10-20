@@ -1,0 +1,5 @@
+.idea
+*.zip
+CreateJiraTicket.iml
+atlassian-ide-plugin.xml
+out
