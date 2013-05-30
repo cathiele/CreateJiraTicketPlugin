@@ -73,17 +73,10 @@ public class CreateJiraTicketSettings implements Configurable, DocumentListener,
     }
 
     @Nls
-    @Override
     public String getDisplayName() {
         return "Create Jira Ticket";
     }
 
-    @Override
-    public Icon getIcon() {
-        return null;  // TODO (Maybe) Create Icon for the Plugin?
-    }
-
-    @Override
     public String getHelpTopic() {
         return null;  // TODO implement Help Text
     }
