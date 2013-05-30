@@ -2,7 +2,7 @@
     <name>Create Jira Ticket</name>
     <description>Creates Atlassian Jira-Tickets directly from Comments in Sourcecode based on configurable rules.
     </description>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <vendor>Carsten Thiele</vendor>
 
     <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
